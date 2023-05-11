@@ -1,0 +1,63 @@
+[{
+    "id": 1,
+    "nombre": "masajes con piedras calientes",
+    "descripcion": "Recurso terapéutico de la utilización de piedras sobre la piel alternando temperaturas frías y calientes, ayudan a combatir el dolor, logran relajación plena, recuperan el sueño, revitalizan y oxigenan la piel.",
+    "precio": 10000,
+    "img": "../public/masajes-con-piedras-clientes.png",
+    "category": "Masajes"
+},
+{
+    "id": 2,
+    "nombre": "masajes relajantes",
+    "descripcion": "Logrando un estado de calma físico y mental que muchas veces no puede obtenerse naturalmente, dándole al cuerpo un estado de tranquilidad y bienstar. Se utilizan largos movimientos con presión moderada para eliminar toxinas y la tensión muscular.",
+    "precio": 10000,
+    "img": "../public/masajes-relajantes.png",
+    "category": "Masajes"
+},
+{
+    "id": 3,
+    "nombre": "reflexologia",
+    "descripcion": "Masajes de presión profunda pero delicada, estimulan las terminaciones nerviosas del organismo situadas en pies. Se enfoca en desbloquear campos energéticos encendiendo los mecanismos sanadores de tu propio cuerpo.",
+    "precio": 10000,
+    "img": "../public/reflexologia.png",
+    "category": "Masajes"
+},
+{
+    "id": 4,
+    "nombre": "reflexologia",
+    "descripcion": "Masajes de presión profunda pero delicada, estimulan las terminaciones nerviosas del organismo situadas en pies. Se enfoca en desbloquear campos energéticos encendiendo los mecanismos sanadores de tu propio cuerpo.",
+    "precio": 10000,
+    "img": "../public/reflexologia.png",
+    "category": "Masajes"
+},{
+    "id": 5,
+    "nombre": "Pelling",
+    "descripcion": "Tratamiento más novedoso en procedimientos resurfacing sin láser, combinando simultáneamente limpieza, exfoliación, extracción, hidratación y antioxidantes, dando como resultado una piel más brillante y sin molestias.",
+    "precio": 10000,
+    "img": "../public/peeling.png",
+    "category": "Faciales"
+},
+{
+    "id": 6,
+    "nombre": "Pulido e hidratacion",
+    "descripcion": "Tratamiento más novedoso en procedimientos resurfacing sin láser, combinando simultáneamente limpieza, exfoliación, extracción, hidratación y antioxidantes, dando como resultado una piel más brillante y sin molestias.",
+    "precio": 10000,
+    "img": "../public/pulido-e-hidratacion.png",
+    "category": "Faciales"
+},
+{
+    "id": 7,
+    "nombre": "Microdermo Abrasion",
+    "descripcion": "Tratamiento más novedoso en procedimientos resurfacing sin láser, combinando simultáneamente limpieza, exfoliación, extracción, hidratación y antioxidantes, dando como resultado una piel más brillante y sin molestias.",
+    "precio": 10000,
+    "img": "../public/microdermoabrasion.png",
+    "category": "Faciales"
+},
+{
+    "id": 8,
+    "nombre": "Microdermo Abrasion",
+    "descripcion": "Tratamiento más novedoso en procedimientos resurfacing sin láser, combinando simultáneamente limpieza, exfoliación, extracción, hidratación y antioxidantes, dando como resultado una piel más brillante y sin molestias.",
+    "precio": 10000,
+    "img": "../public/microdermoabrasion.png",
+    "category": "Faciales"
+}]
