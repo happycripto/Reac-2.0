@@ -1,50 +1,55 @@
-import { useEffect } from 'react'
-import './ItemListContainer.css'
-import { useState } from 'react'
-import { pedirDatos } from '../../helpers/pedirdatos'
-import ItemList from '../ItemsList/ItemsList'
-import { useParams, useSearchParams } from 'react-router-dom'
+import { useEffect } from 'react';
+import './ItemListContainer.css';
+import { useState } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 import Spinner from 'react-bootstrap/Spinner';
+import { useParams } from 'react-router-dom';
+import ItemList from '../ItemsList/ItemsList';
 
-export const ItemListContainer = ({category}) => {
-    
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [searchParams] = useSearchParams()
-    const search = searchParams.get('search')
-    
+export const ItemListContainer = () => {
+    const { category } = useParams();
+    const [productos, setProductos] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+  // FIREBASE!!!!!
     useEffect(() => {
-        setLoading(true)
+    setLoading(true);
 
-        pedirDatos()
-            .then((data) => {
-                if (!category) {
-                    setProductos(data)
-                } else {
-                    setProductos( data.filter((el) => el.category === category) )
-                }
-            })
-            .catch((err) => console.log(err))
-            .finally(() => setLoading(false))
-            
-    }, [category])
+    // 1. Armar referencia ( sync )
+    const servicioref = collection(db, 'servicios');
+    // 2.- Consumir esa referencia ( async )
+    getDocs(servicioref)
+        .then((res) => {
+        const docs = res.docs.map((doc) => {
+            return {
+            ...doc.data(),
+            id: doc.id,
+            category: doc.data().category,
+            };
+        });
 
-    const listado = search
-        ? productos.filter((el) => el.nombre.toLowerCase().includes(search.toLowerCase())) 
-        : productos
+        // Filtrar por categoría si se proporciona
+        const filteredProducts = category
+        ? docs.filter((doc) => doc.category.toLowerCase() === category.toLowerCase())
+        : docs;
 
-    console.log(listado)
+        console.log(filteredProducts);
+        setProductos(filteredProducts);
+        })
+        .catch((e) => console.log(e))
+        .finally(() => setLoading(false));
+    }, [category]);
 
     return (
         <div className="container my-5">
-            {
-            loading
-                ?<Spinner animation="border" role="status">
-                <span className="Loading visually-hidden">Loading...</span>
-                </Spinner>
-                : <ItemList items={listado}/>
-            }
+        {loading ? (
+            <Spinner animation="border" role="status">
+            <span className="Loading visually-hidden">Loading...</span>
+            </Spinner>
+        ) : (
+            <ItemList items={productos} categoria={category} />
+        )}
         </div>
-        
-    )
-}
+    );
+};

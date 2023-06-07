@@ -16,7 +16,7 @@ const Contacto = () => {
           loading="lazy"
           allowFullScreen
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.321860641151!2d-58.48308952343177!3d-34.5707216557579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb66153f3d205%3A0x878ceceae06df81c!2sAv.%20Monroe%204539%2C%20C1431%20CABA!5e0!3m2!1ses-419!2sar!4v1683603208622!5m2!1ses-419!2sar">  
-         </iframe>
+          </iframe>
           </div>
         </div>
         <div className="col-md-6">

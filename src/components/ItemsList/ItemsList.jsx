@@ -1,18 +1,18 @@
 import ItemCard from "../ItemsCards/ItemsCards";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, category }) => {
+  // Filtrar por categoría si se proporciona
+  const filteredItems = category
+    ? items.filter((item) => item.category === category)
+    : items;
+
   return (
     <div>
-      <h2>Masajes</h2>
+      {category ? <h2>{category}</h2> : <h2>Servicios</h2>}
       <hr />
-
       <div className="row">
-        {items.map((item) => (
-          <ItemCard
-            item={item}
-            key={item.id}
-            // imageUrl={item.img} // Nueva propiedad imageUrl
-          />
+        {filteredItems.map((item) => (
+          <ItemCard item={item} key={item.id} />
         ))}
       </div>
     </div>
