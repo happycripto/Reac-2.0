@@ -1,6 +1,12 @@
-* {
+body{
+    background-color: black;
+}
+.app-container {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000000;
+    height: 100vh;
 }
+
+
+

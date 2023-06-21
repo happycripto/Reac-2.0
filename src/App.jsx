@@ -7,11 +7,12 @@ import AppRouter from './router/AppRouter';
 function App() {
 
   return (
-
-    
-      <CartProvider>
-        <AppRouter />
-      </CartProvider>
+      
+    <div className="app-container"> 
+    <CartProvider>
+      <AppRouter />
+    </CartProvider>
+  </div>
     
   );
 }

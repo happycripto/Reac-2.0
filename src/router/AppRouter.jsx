@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 // import RegisterScreen from '../components/LoginScreen/RegisterScreen';
 import { useContext } from "react";
 // import { AuthContext } from "../context/AuthContext";
-// import Checkout from "../components/Checkout/Checkout";
+import Checkout from "../components/Checkout/Checkout";
 import { ItemListContainer } from "../components/ItemListContainer/ItemListContainer";
 import { Navbar } from '../components/Navbar/Navbar';
 import SixImages from '../components/ImgContainer/ImgContainer';
@@ -55,7 +55,8 @@ const AppRouter = () => {
                 <Route path="/Contacto" element={<div><Bienvenida /><SixImages /><Contacto/></div>} />
                 <Route path='/Cart' element={ <Cart/> }/>
                 <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }/>
-                <Route path='*' element={ <Navigate to={"/"} /> }/>
+                <Route path='/checkout' element={ <Checkout/> }/>
+                <Route path='*' element={ <Navigate to={"/Inicio"} /> }/>
 
                 </Routes>
             </CartProvider>
