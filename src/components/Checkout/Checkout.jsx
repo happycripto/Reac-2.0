@@ -61,39 +61,26 @@ const Checkout = () => {
 
         console.log(orden)
 
-        orden.items.forEach((item) => {
-            const itemRef = doc(db, "productos", item.id)
-
-            getDoc(itemRef)
-                .then((doc) => {
-                    if (doc.data().stock >= item.cantidad) {
-                        updateDoc(itemRef, {
-                            stock: doc.data().stock - item.cantidad
-                        })
-                    } else {
-                        alert("No hay stock de " + item.nombre)
-                    }
-                })
-        })
-
-
-
         const ordersRef = collection(db, "ordenes")
 
         addDoc(ordersRef, orden)
-            .then((doc)=>console.log(doc.id))
+            .then((doc)=>  {
+                setOrderId(doc.id)
+                console.log(doc.id)
+            })
 
         
     }
 
     if (orderId) {
         return (
+            
             <div className="container my-5">
                 <h2>Tu compra se registró exitosamente!</h2>
                 <hr/>
                 <p>Guardá tu número de orden: {orderId}</p>
 
-                <Link to="/">Volver</Link>
+                <Link to="/inicio">Volver</Link>
             </div>
         )
     }
@@ -119,7 +106,7 @@ const Checkout = () => {
                 />
                 <input 
                     className="form-control my-2"
-                    type="text"
+                    type="number"
                     value={values.telefono}
                     placeholder="Numero de Telefono"
                     name="telefono"
