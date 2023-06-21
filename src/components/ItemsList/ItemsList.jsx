@@ -5,7 +5,7 @@ const ItemList = ({ items, category }) => {
   const filteredItems = category
     ? items.filter((item) => item.category === category)
     : items;
-
+    
   return (
     <div>
       {category ? <h2>{category}</h2> : <h2>Servicios</h2>}
@@ -13,9 +13,13 @@ const ItemList = ({ items, category }) => {
       <div className="row">
         {filteredItems.map((item) => (
           <ItemCard item={item} key={item.id} />
+          
         ))}
+        
       </div>
+      
     </div>
+    
   );
 };
 

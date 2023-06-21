@@ -1,3 +1,4 @@
+import CartWidget from '../CardWidget/CardWidget';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ export const Navbar = () => {
             <Link to="/Contacto" className="navbar_link">Contacto</Link>
             </nav>
         </div>
+        <CartWidget />
         </header>
     );
 };

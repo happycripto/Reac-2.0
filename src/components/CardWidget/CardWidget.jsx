@@ -1,15 +1,18 @@
+import './CardWidget.css'
+import { FaCartArrowDown } from "@react-icons/all-files/fa/FaCartArrowDown";
+import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
+const CartWidget = () => {
+    const { cart, totalCantidad } = useContext(CartContext)
 
-/*cons CardWidget = () => {
-
-    return(
-        <div>
-
-        </div>
+    return (
+        <Link to="/cart" className={`cart-widget ${cart.length > 0 ? 'cart-widget-active' : ''}`}>
+            <FaCartArrowDown />
+            <span>{totalCantidad()}</span>
+        </Link>
     )
-
-
-
 }
 
-export default CardWidget*/
+export default CartWidget
