@@ -66,7 +66,7 @@ const Checkout = () => {
         addDoc(ordersRef, orden)
             .then((doc)=>  {
                 setOrderId(doc.id)
-                console.log(doc.id)
+                emptyCart()
             })
 
         
