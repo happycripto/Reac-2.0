@@ -73,6 +73,11 @@ const Checkout = () => {
     }
 
     if (orderId) {
+
+        MySwal.fire({
+            title: 'Gracias por su compra',
+            icon: 'success',
+        });
         return (
             
             <div className="container my-5">
