@@ -8,7 +8,7 @@ const ItemList = ({ items, category }) => {
     
   return (
     <div>
-      {category ? <h2>{category}</h2> : <h2>Servicios</h2>}
+      {category ? <h2>{category}</h2> : <h2>Servicios!!</h2>}
       <hr />
       <div className="row">
         {filteredItems.map((item) => (

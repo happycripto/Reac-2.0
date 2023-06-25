@@ -34,7 +34,6 @@ export const ItemListContainer = () => {
         ? docs.filter((doc) => doc.category.toLowerCase() === category.toLowerCase())
         : docs;
 
-        console.log(filteredProducts);
         setProductos(filteredProducts);
         })
         .catch((e) => console.log(e))
@@ -48,7 +47,7 @@ export const ItemListContainer = () => {
             <span className="Loading visually-hidden">Loading...</span>
             </Spinner>
         ) : (
-            <ItemList items={productos} categoria={category} />
+            <ItemList items={productos} category={category} />
         )}
         </div>
     );

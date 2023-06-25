@@ -7,7 +7,7 @@ export const Navbar = () => {
         <header className="header">
         <div className="header_container">
             <Link to="/Inicio">
-            <img src="./public/logo mi templo spa2.png" alt="logo" className="logo" /></Link>
+            <img src="/logomitemplospa2.png" alt="logo" className="logo" /></Link>
             <nav className="navbar">
             <Link to="/Inicio" className="navbar_link">Inicio</Link>
             <Link to="/Servicios" className="navbar_link">Servicios</Link>

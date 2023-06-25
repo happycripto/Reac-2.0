@@ -6,7 +6,7 @@ return (
     <Carousel.Item>
         <img
         className="d-block w-100"
-        src="../public/carrusel/Banner-Web-Desktop.png"
+        src="/carrusel/Banner-Web-Desktop.png"
         alt="First slide"
         />
 
@@ -17,7 +17,7 @@ return (
     <Carousel.Item>
         <img
         className="d-block w-100"
-        src="../public/carrusel/dermopigmentacion.png"
+        src="/carrusel/dermopigmentacion.png"
         alt="Second slide"
         />
 
@@ -28,7 +28,7 @@ return (
     <Carousel.Item>
         <img
         className="d-block w-100"
-        src="../public/carrusel/FACIALES.png"
+        src="/carrusel/FACIALES.png"
         alt="Third slide"
         />
 

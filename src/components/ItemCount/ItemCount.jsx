@@ -8,7 +8,6 @@ const ItemCount = ({cantidad, setCantidad, stock, agregar}) => {
     }
 
     const handleSumar = () => {
-        console.log('Stock:', stock);
         cantidad < stock && setCantidad(cantidad + 1)
     }
 
