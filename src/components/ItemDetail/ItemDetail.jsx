@@ -8,6 +8,7 @@ const ItemDetail = ({item}) => {
     const { cart, agregarAlCarrito, isInCart } = useContext(CartContext)
 
     const [cantidad, setCantidad] = useState(1)
+    const stock = 10; // Valor de stock inicial
 
     const handleAgregar = () => {
         const newItem = {
@@ -36,6 +37,7 @@ const ItemDetail = ({item}) => {
                         cantidad={cantidad}
                         setCantidad={setCantidad}
                         agregar={handleAgregar}
+                        stock={stock} // Pasar el valor del stock al componente ItemCount
                     />
             }
         </div>

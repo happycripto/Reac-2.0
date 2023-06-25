@@ -8,6 +8,7 @@ const ItemCount = ({cantidad, setCantidad, stock, agregar}) => {
     }
 
     const handleSumar = () => {
+        console.log('Stock:', stock);
         cantidad < stock && setCantidad(cantidad + 1)
     }
 
@@ -29,13 +30,18 @@ const ItemCount = ({cantidad, setCantidad, stock, agregar}) => {
                 onClick={handleSumar} 
                 className={cantidad === stock ? "btn mx-1 btn-danger" : "btn mx-1 btn-primary"}
                 disabled={cantidad === stock}
+                
             >
                 +
             </button>
             <br/>
             <button onClick={agregar} className="btn btn-success my-2">Agregar al carrito</button>
+            
         </div>
+        
     )
+
+    
 }
 
 export default ItemCount

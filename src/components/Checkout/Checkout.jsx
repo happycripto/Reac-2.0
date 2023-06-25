@@ -5,6 +5,7 @@ import { collection, addDoc, doc, updateDoc, getDoc } from "firebase/firestore"
 import { db } from "../../firebase/config"
 import { Link } from "react-router-dom"
 import { MySwal, alertClass }  from "../Alert/Alert";
+import HistorialOrders from "../HistorialOrders/HistorialOrders"
 
 
 
@@ -85,7 +86,8 @@ const Checkout = () => {
                 <hr/>
                 <p>Guardá tu número de orden: {orderId}</p>
 
-                <Link to="/inicio">Volver</Link>
+                <Link className="btn btn-primary" to="/inicio">Volver</Link>
+                <HistorialOrders/>
             </div>
         )
     }
@@ -128,6 +130,7 @@ const Checkout = () => {
 
                 <button className="btn btn-primary" type="submit">Enviar</button>
             </form>
+            
         </div>
     )
 }
