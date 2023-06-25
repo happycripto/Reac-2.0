@@ -27,7 +27,6 @@ const Cart = () => {
         <div className="container my-5">
             <h2 className="Letras" >Tu compra</h2>
             <hr/>
-
             {
                 cart.map((item) => (
                     <div key={item.id}>
